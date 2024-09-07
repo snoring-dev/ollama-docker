@@ -39,13 +39,13 @@ services:
     depends_on:
       - ollama
     ports:
-      - "3000:8080"
+      - "3456:8080"
     environment:
       - OLLAMA_API_BASE_URL=http://ollama:11434
       - ENV=production
       - WEBUI_AUTH=False
       - WEBUI_NAME=valiantlynx AI
-      - WEBUI_URL=http://localhost:3000
+      - WEBUI_URL=http://localhost:3456
       - WEBUI_SECRET_KEY=t0p-s3cr3t
     restart: unless-stopped
     networks:
